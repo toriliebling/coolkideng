@@ -13,12 +13,12 @@ body {
     min-height: 100vh;
 }
 
-/*
+
 h1 {
     font-family: "Jost", sans-serif;
     font-weight: 400;
 }
-*/
+
 
 a {
     text-decoration: none;
@@ -70,6 +70,7 @@ img {
     font-size: 32px;
     text-shadow: 2px 2px 0 #c72116;
     margin-bottom: 5px;
+    -webkit-text-stroke:0;
 }
 
 .logo-kids p {
@@ -380,4 +381,5 @@ h1 {
     font-style: oblique;
     font-size: 120px;
     text-align: center;
+
 }
