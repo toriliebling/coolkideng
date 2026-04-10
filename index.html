@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -22,7 +22,6 @@
                     <li><a href="#" class="nav-link active">Главная</a></li>
                     <li><a href="#sections" class="nav-link">Разделы</a></li>
                     <li><a href="#" class="nav-link">Тренировочные задания</a></li>
-                    <li><a href="#" class="nav-link">О нас</a></li>
                 </ul>
             </nav>
         </div>
@@ -30,9 +29,9 @@
 
     <div class="hero container">
         <div class="hero--info">
-            <h2>Изучаем английский весело!</h2>
+            <h2>Изучаем английский просто!</h2>
             <h1>Добро пожаловать на наш сайт!</h1>
-            <p>Найдите интересные для вас курсы на сайте и попробуйте уделять 15 мин упражнениям 3-5 дней в неделю — в таком легком темпе уже скоро вы увидите кардинальное улучшение своего английского!</p>
+            <p>Найдите интересные для вас курсы на сайте и попробуйте уделять 15 мин упражнениям 3-5 дней в неделю — в таком легком темпе уже скоро вы увидите улучшение своего английского!</p>
             
         </div>
         <img src="images/school.jpg" alt="Веселое изучение английского">
@@ -54,21 +53,21 @@
                     <img src="images/aipad.jpg" alt="Слова и предложения" class="section-img">
                     <h3>Слова и предложения</h3>
                     <p>Расширяем словарный запас и учимся составлять предложения</p>
-                    <button class="section-btn">Перейти</button>
+                    <button class="section-btn" onclick="window.location.href='words.html'">Перейти</button>
                 </div>
                 
                 <div class="section-card">
-                    <img src="images/handsaaa.png" alt="Времена в английском" class="section-img">
-                    <h3>Времена в английском. Времена группы Simple</h3>
-                    <p>Изучаем основные времена английского языка: Present, Past, Future Simple</p>
-                    <button class="section-btn">Перейти</button>
+                    <img src="images/handsaaa.png" alt="Личные местоимения" class="section-img">
+                    <h3>Личные местоимения и глагол to be</h3>
+                    <p>Изучаем личные местоимения (I, you, he, she, it, we, they) и спряжение глагола to be (am, is, are)</p>
+                    <button class="section-btn" onclick="window.location.href='pronouns.html'">Перейти</button>
                 </div>
                 
                 <div class="section-card">
-                    <img src="images/tinypeople.jpg" alt="Артикли" class="section-img">
-                    <h3>Артикли</h3>
-                    <p>Разбираемся с артиклями a, an, the и их правильным использованием</p>
-                    <button class="section-btn">Перейти</button>
+                    <img src="images/tinypeople.jpg" alt="Множественное число" class="section-img">
+                    <h3>Множественное число</h3>
+                    <p>Изучаем образование множественного числа существительных и исключения (child - children, foot - feet и др.)</p>
+                    <button class="section-btn" onclick="window.location.href='plural.html'">Перейти</button>
                 </div>
             </div>
         </div>
@@ -87,5 +86,13 @@
             </div>
         </div>
     </footer>
+
+    <!-- Кнопка "Наверх" -->
+    <a href="#" class="scroll-to-top">
+        <img src="images/arrow.png" alt="Наверх">
+    </a>
+
+    <script src="scroll-to-top.js"></script>
+    <script src="email-popup.js"></script>
 </body>
 </html>

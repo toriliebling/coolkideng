@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -24,7 +24,6 @@
                     <li><a href="index.html" class="nav-link">Главная</a></li>
                     <li><a href="index.html#sections" class="nav-link">Разделы</a></li>
                     <li><a href="#" class="nav-link">Тренировочные задания</a></li>
-                    <li><a href="#" class="nav-link">О нас</a></li>
                 </ul>
             </nav>
         </div>
@@ -36,7 +35,7 @@
             <h1 class="alphabet-title">Приступаем к изучению английского алфавита</h1>
             <p class="alphabet-subtitle">Нажмите на любую букву, чтобы услышать ее произношение. Гласные буквы выделены зеленым цветом, согласные - фиолетовым.</p>
             
-            <!-- Аудио элементы для каждой буквы (скрыты) -->
+            <!-- Аудио элементы для каждой буквы (скрытые) -->
             <div style="display: none;">
                 <audio id="audio-A" preload="auto">
                     <source src="sounds_letters/a.mp3" type="audio/mpeg">
@@ -118,6 +117,9 @@
                 </audio>
             </div>
             
+            <!-- Аудио элементы для звуков (скрытые, будут сгенерированы JavaScript) -->
+            <div id="audio-container-sounds" style="display: none;"></div>
+            
             <!-- Кнопки с буквами алфавита -->
             <div class="alphabet-grid">
                 <!-- Гласные буквы -->
@@ -145,34 +147,36 @@
                 <button class="letter-btn consonant" onclick="playSoundAndShowAnimal('V', this)" title="Буква V. Нажмите, чтобы услышать произношение">V</button>
                 <button class="letter-btn consonant" onclick="playSoundAndShowAnimal('W', this)" title="Буква W. Нажмите, чтобы услышать произношение">W</button>
                 <button class="letter-btn consonant" onclick="playSoundAndShowAnimal('X', this)" title="Буква X. Нажмите, чтобы услышать произношение">X</button>
-                <button class="letter-btn vowel" onclick="playSoundAndShowAnimal('Y', this)" title="Буква Y. Нажмите, чтобы услышать произношение">Y</button>
+                <button class="letter-btn consonant" onclick="playSoundAndShowAnimal('Y', this)" title="Буква Y. Нажмите, чтобы услышать произношение">Y</button>
                 <button class="letter-btn consonant" onclick="playSoundAndShowAnimal('Z', this)" title="Буква Z. Нажмите, чтобы услышать произношение">Z</button>
             </div>
             
-            <!-- Попап с информацией о животном -->
-            <div id="animal-popup" class="animal-popup">
+            <!-- Раздел звуков английского языка -->
+            <section class="sounds-section">
+                <div class="container">
+                    <h2 class="sounds-title">Фонетические звуки английского языка</h2>
+                    <p class="sounds-subtitle">Нажмите на кнопку "Звук", чтобы услышать произношение фонемы, или "Слово", чтобы услышать пример слова. Гласные звуки выделены зеленым, согласные — фиолетовым.</p>
+                    <div id="sounds-grid" class="sounds-grid">
+                        <!-- Карточки звуков будут сгенерированы JavaScript -->
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Попап с животным -->
+            <div class="animal-popup" id="animal-popup">
                 <div class="popup-content">
                     <button class="popup-close" onclick="closeAnimalPopup()">×</button>
-                    <h3 class="popup-title">Животное на букву <span id="popup-letter">A</span></h3>
-                    <div class="popup-body">
-                        <div class="animal-image">
-                            <img id="popup-image" src="images/books.jpg" alt="Животное">
-                        </div>
-                        <div class="animal-info">
-                            <h4 id="popup-animal-name">Антилопа</h4>
-                            <p id="popup-fact">Антилопы — быстрые травоядные животные, обитающие в саваннах Африки.</p>
-                        </div>
+                    <div class="animal-image">
+                        <img id="popup-image" src="images/animals/antilope.jpg" alt="Животное">
+                    </div>
+                    <div class="animal-info">
+                        <h3 id="popup-letter">A</h3>
+                        <h4 id="popup-animal-name">Антилопа</h4>
+                        <p id="popup-fact">Антилопы — быстрые травоядные животные, обитающие в саваннах Африки.</p>
                     </div>
                 </div>
             </div>
-            <div class="instructions">
-                <h3>Как пользоваться:</h3>
-                <p>1. Нажмите на любую букву, чтобы услышать ее произношение</p>
-                <p>2. Попробуйте повторить звук вслух</p>
-                <p>3. Запомните написание и звучание каждой буквы</p>
-                <p>4. Практикуйтесь ежедневно для лучшего результата</p>
-                <p><strong>Всего букв: 26 (5 гласных, 21 согласная)</strong></p>
-            </div>
+            
         </div>
     </main>
 
@@ -190,6 +194,12 @@
         </div>
     </footer>
 
-    
+    <!-- Кнопка "Наверх" -->
+    <a href="#" class="scroll-to-top">
+        <img src="images/arrow.png" alt="Наверх">
+    </a>
+
+    <script src="scroll-to-top.js"></script>
+    <script src="email-popup.js"></script>
 </body>
 </html>

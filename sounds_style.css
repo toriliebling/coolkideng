@@ -51,7 +51,7 @@
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 6px 0 #d32f2f;
-    border: 3px solid #1a535c;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,6 +102,168 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+/* Стили для раздела звуков */
+.sounds-section {
+    margin-top: 60px;
+    padding: 30px 0;
+    background: linear-gradient(135deg, #fff9e6 0%, #ffe6e6 100%);
+    border-radius: 20px;
+    border: none;
+}
+
+.sounds-title {
+    text-align: center;
+    color: #1a535c;
+    font-family: "Jost", sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0 #ffd166;
+}
+
+.sounds-subtitle {
+    text-align: center;
+    color: #1a535c;
+    font-family: "Jost", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sounds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sound-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sound-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.sound-symbol {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1a535c;
+    margin-bottom: 10px;
+    font-family: "Jost", sans-serif;
+}
+
+.sound-type {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-family: "Jost", sans-serif;
+}
+
+.sound-type.vowel {
+    background: #06d6a0;
+    color: white;
+}
+
+.sound-type.consonant {
+    background: #6a11cb;
+    color: white;
+}
+
+.sound-example {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    font-family: "Jost", sans-serif;
+}
+
+.sound-transcription {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+    font-family: "Jost", sans-serif;
+}
+
+.sound-translation {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.sound-buttons {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+}
+
+.sound-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-family: "Jost", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex: 1;
+    max-width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.sound-btn.play-sound {
+    background: #ff6b6b;
+    color: white;
+    box-shadow: 0 4px 0 #d32f2f;
+}
+
+.sound-btn.play-sound:hover {
+    background: #ff8e8e;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 0 #d32f2f;
+}
+
+.sound-btn.play-word {
+    background: #4ecdc4;
+    color: white;
+    box-shadow: 0 4px 0 #2a8c85;
+}
+
+.sound-btn.play-word:hover {
+    background: #6ae0d7;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 0 #2a8c85;
+}
+
+.sound-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 0;
+}
+
 /* Стили для попапа с животным */
 .animal-popup {
     display: none;
@@ -115,12 +277,12 @@
 
 .popup-content {
     background: linear-gradient(135deg, #ffd166, #ff9e6d);
-    border-radius: 12px;
-    padding: 12px;
-    max-width: 250px;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 200px;
     width: auto;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    border: 3px solid #1a535c;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border: none;
     position: relative;
     font-family: "Jost", sans-serif;
     color: #1a535c;
@@ -168,13 +330,20 @@
     gap: 20px;
 }
 
+.animal-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .animal-image img {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
-    border-radius: 10px;
-    border: 3px solid #1a535c;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border: 2px solid #1a535c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .animal-info {
@@ -195,22 +364,22 @@
 
 @media (max-width: 768px) {
     .popup-content {
-        padding: 10px;
-        max-width: 200px;
+        padding: 8px;
+        max-width: 160px;
     }
     .animal-image img {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
     }
     .popup-title {
-        font-size: 18px;
-        padding-right: 30px;
+        font-size: 16px;
+        padding-right: 25px;
     }
     .animal-info h4 {
-        font-size: 16px;
+        font-size: 14px;
     }
     .animal-info p {
-        font-size: 12px;
+        font-size: 11px;
     }
 }
 

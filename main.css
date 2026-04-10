@@ -6,6 +6,16 @@
     box-sizing: border-box;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: linear-gradient(135deg, #e0f7fa 0%, #291ec5 50%, #e3f2fd 100%);
     background-attachment: fixed;
@@ -14,31 +24,34 @@ body {
 }
 
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
     font-family: "Jost", sans-serif;
+}
+
+h1 {
     font-weight: 400;
 }
 
+p, button, input, textarea, select {
+    font-family: "Jost", sans-serif;
+}
 
 a {
     text-decoration: none;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 img {
     max-width: 100%;
 }
 
-/* Стили для новой шапки */
+/* Стили для шапки */
 .header-kids {
     background: linear-gradient(135deg, #ff9a9e 0%, #811818 100%);
     padding: 15px 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+    margin-top: 0;
 }
 
 .header-kids::before {
@@ -195,6 +208,58 @@ img {
     
     .footer-buttons {
         justify-content: center;
+    }
+}
+
+/* Кнопка "Наверх" */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff9a9e 0%, #811818 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border: 3px solid #ffd166;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    opacity: 0.9;
+}
+
+.scroll-to-top.footer-visible {
+    bottom: 120px; /* Поднимаем кнопку выше, когда футер виден */
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    opacity: 1;
+}
+
+.scroll-to-top img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Адаптивность для кнопки */
+@media (max-width: 768px) {
+    .scroll-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    .scroll-to-top.footer-visible {
+        bottom: 100px; /* Меньшее смещение на мобильных */
+    }
+    .scroll-to-top img {
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -372,14 +437,3 @@ img {
     }
 }
 
-h1 {
-    color: #a1bedf;
-    -webkit-text-stroke: 1px rgb(0, 0, 0);
-    color: #ff0000;
-    font-family: "Jost", serif;
-    font-weight: 300;
-    font-style: oblique;
-    font-size: 120px;
-    text-align: center;
-
-}
